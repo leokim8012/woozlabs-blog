@@ -22,11 +22,11 @@ This is the Wooz Labs hosted at https://woozlabs.com. For other versions, check 
 > For more infos contact [kim.kw8012@gmail.com]
 
 [kim.kw8012@gmail.com]: mailto:kim.kw8012@gmail.com
-[woozlabs]: https://woozlabs.com
-[woozblog]: https://blog.woozlabs.com
-[woozapi]: https://api.woozlabs.com
-[woozplay]: https://play.woozlabs.com
-[wooztrading]: https://trading.woozlabs.com
-[woozaccounts]: https://accounts.woozlabs.com
-[wooznds]: https://nds.woozlabs.com
-[woozllm]: https://chat.woozlabs.com
+[WoozLabs]: https://woozlabs.com
+[WoozBlog]: https://blog.woozlabs.com
+[WoozAPI]: https://api.woozlabs.com
+[WoozPlay]: https://play.woozlabs.com
+[WoozTrading]: https://trading.woozlabs.com
+[WoozAccounts]: https://accounts.woozlabs.com
+[woozWoozNDSnds]: https://nds.woozlabs.com
+[WoozLLM]: https://chat.woozlabs.com
