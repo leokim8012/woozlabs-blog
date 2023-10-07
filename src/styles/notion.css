@@ -526,7 +526,7 @@
 }
 
 .notion-page-no-cover {
-  margin-top: 48px !important;
+  /* margin-top: 48px !important; */
   padding-top: 96px;
 }
 
@@ -894,7 +894,7 @@ svg.notion-page-icon {
 .notion-code-copy-button:hover {
   background-color: #f3f4f6;
   border-color: rgba(27, 31, 36, 0.15);
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
 }
 
 .notion-code-copy-button:active {
@@ -2710,7 +2710,7 @@ svg.notion-page-icon {
   /* YT's actual play button svg */
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24 27 14v20" fill="white"/></svg>');
   filter: grayscale(100%);
-  transition: filter 0.1s cubic-bezier(0, 0, 0.2, 1);
+  transition: filter 0.2s cubic-bezier(0, 0, 0.2, 1);
   border: none;
 }
 .notion-yt-lite:hover > .notion-yt-playbtn,

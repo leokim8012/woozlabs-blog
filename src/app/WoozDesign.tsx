@@ -4,5 +4,9 @@ import React from 'react';
 import { Theme } from '@woozdesign/ui';
 
 export const RootStyleRegistry = ({ children }: React.PropsWithChildren) => {
-  return <Theme.ThemeProvider accentColor={'violet'}>{children}</Theme.ThemeProvider>;
+  return (
+    <Theme.ThemeProvider accentColor={'violet'} scaling={'90%'}>
+      {children}
+    </Theme.ThemeProvider>
+  );
 };
