@@ -11,7 +11,7 @@ const RecommendArticleList: FC<RecommendArticleListProps> = () => {
   const articles = ARTICLES.filter((article) => article.recommended);
   return (
     <>
-      <Typography.Text variant="p" highContrast={false}>
+      <Typography.Text variant="p" highContrast={false} style={{ padding: '0 var(--space-4)' }}>
         Recommended
       </Typography.Text>
       {articles.map((article) => (

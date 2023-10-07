@@ -20,7 +20,7 @@ const ArchiveLayout: FC<ArchiveLayoutProps> = ({ articles }) => {
     <>
       <AppBar />
       <Layout.Container>
-        <Layout.Row style={{ maxWidth: '1280px', margin: 'auto' }} gutter={[32, 32]}>
+        <Layout.Row style={{ maxWidth: '1280px', margin: 'auto' }}>
           <Layout.Col
             xs={0}
             sm={8}
@@ -31,6 +31,7 @@ const ArchiveLayout: FC<ArchiveLayoutProps> = ({ articles }) => {
               overflowY: 'auto',
               height: 'calc(100vh - 64px)',
               textAlign: 'end',
+              padding: '0 var(--space-4)',
             }}
           >
             <RecommendArticleList />

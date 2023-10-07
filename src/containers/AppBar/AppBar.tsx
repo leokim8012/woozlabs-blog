@@ -11,7 +11,7 @@ const AppBar: FC<AppBarProps> = ({}) => {
     <div className={styles.wrapper}>
       <div className={styles.content}>
         <a href="/">
-          <Image width={120} alt="Wooz Blog" src="/assets/icons/logo.svg"></Image>
+          <Image width={120} alt="Wooz Blog" src="/assets/icons/logo.svg" placeholder="/assets/icons/logo.svg"></Image>
         </a>
       </div>
     </div>
