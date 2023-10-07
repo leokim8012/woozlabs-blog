@@ -85,7 +85,7 @@ const ArticleLayout: FC<ArticleLayoutProps> = ({ article, recordMap, nextArticle
   return (
     <>
       <AppBar />
-      <Layout.Container style={{ maxWidth: '1400px' }}>
+      <Layout.Container style={{ maxWidth: '1400px', overflow: 'hidden' }}>
         <Layout.Row gutter={[32, 32]}>
           <Layout.Col xs={0} sm={0} md={6} className={styles.sider} style={{ ...siderStyle('128px'), textAlign: 'end' }}>
             <RecommendArticleList />
