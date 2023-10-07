@@ -1,6 +1,8 @@
 .article {
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  text-align: end;
+  justify-content: end;
 
   .article-card {
     color: var(--color-gray-12);

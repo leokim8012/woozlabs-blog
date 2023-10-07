@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@woozdesign/icons": "^1.0.2",
-    "@woozdesign/ui": "^0.1.19",
+    "@woozdesign/ui": "^0.2.1",
     "katex": "^0.16.9",
     "next": "13.5.4",
     "notion-client": "^6.16.0",

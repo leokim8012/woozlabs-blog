@@ -78,15 +78,16 @@ const ArticleLayout: FC<ArticleLayoutProps> = ({ article, recordMap, nextArticle
     router.push(`/article/${articleId}`);
   };
 
+  useEffect(() => {
+    if (document.getElementsByClassName('notion-title')[0]) document.getElementsByClassName('notion-title')[0].remove();
+  });
+
   return (
     <>
       <AppBar />
       <Layout.Container style={{ maxWidth: '1400px' }}>
         <Layout.Row gutter={[32, 32]}>
-          <Layout.Col xs={0} sm={0} md={6} className={styles.sider} style={{ textAlign: 'end', ...siderStyle('180px') }}>
-            <Typography.Text variant="p" highContrast={false}>
-              Recommended
-            </Typography.Text>
+          <Layout.Col xs={0} sm={0} md={6} className={styles.sider} style={{ ...siderStyle('128px'), textAlign: 'end' }}>
             <RecommendArticleList />
           </Layout.Col>
           <Layout.Col xs={24} sm={16} md={12}>
@@ -98,20 +99,12 @@ const ArticleLayout: FC<ArticleLayoutProps> = ({ article, recordMap, nextArticle
               <div style={{ margin: '2rem 0' }}>
                 <Divider />
               </div>
-              <NotionRenderer
-                recordMap={recordMap}
-                fullPage={true}
-                pageTitle={<></>}
-                darkMode={true}
-                components={{ Equation, Code, nextImage: Image }}
-                disableHeader={true}
-                // pageTitle={<div>Title</div>}
-              />
+              <NotionRenderer recordMap={recordMap} fullPage={true} pageTitle={false} darkMode={true} components={{ Equation, Code, nextImage: Image }} disableHeader={true} />
             </article>
             <ArticleFooter article={article} nextArticle={nextArticle} olderArticle={olderArticle} />
           </Layout.Col>
 
-          <Layout.Col xs={0} sm={8} md={6} className={styles.sider} style={siderStyle('180px')}>
+          <Layout.Col xs={0} sm={8} md={6} className={styles.sider} style={siderStyle('150px')}>
             {isLoaded ? <Anchor items={anchorItems} offset={topOffset} /> : null}
           </Layout.Col>
         </Layout.Row>
