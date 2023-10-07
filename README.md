@@ -1,4 +1,4 @@
-# Wooz Labs v0.8
+![header](https://capsule-render.vercel.app/api?type=rect&color=000&fontColor=fff&height=148&section=header&text=Wooz%20Labs&fontSize=52)
 
 ## Overview
 
@@ -28,5 +28,5 @@ This is the Wooz Labs hosted at https://woozlabs.com. For other versions, check 
 [WoozPlay]: https://play.woozlabs.com
 [WoozTrading]: https://trading.woozlabs.com
 [WoozAccounts]: https://accounts.woozlabs.com
-[woozWoozNDSnds]: https://nds.woozlabs.com
+[WoozNDS]: https://nds.woozlabs.com
 [WoozLLM]: https://chat.woozlabs.com
