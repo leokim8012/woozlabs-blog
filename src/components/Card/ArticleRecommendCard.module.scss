@@ -1,0 +1,7 @@
+.article {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.article:hover {
+  transform: translate3D(0, -3%, 0);
+}
