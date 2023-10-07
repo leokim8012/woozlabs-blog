@@ -15,6 +15,18 @@ export interface IArticle {
 
 export const ARTICLES: IArticle[] = [
   {
+    id: 'transformer-2',
+    title: 'From Seq2Seq to Transformer  - Part.2',
+    subtitle: 'The transformer model represents another significant leap in the NLP field after the Seq2Seq model and the attention mechanism.',
+    author: 'Kwanwoo',
+    category: 'ML',
+    recommended: true,
+    thumbnailUrl: 'https://theaisummer.com/static/72223ef8e0057c450fc293743a85724a/97655/multi-head-attention-peltarion.png',
+    notionId: 'c6f655bc5a504797bd7bdf958e4dc36a',
+    createdAt: new Date('2023-10-07T07:00:00.456Z'),
+    updatedAt: new Date('2023-10-07T07:00:00.653Z'),
+  },
+  {
     id: 'transformer-1',
     title: 'From Seq2Seq to Transformer  - Part.1',
     subtitle: 'The attention mechanism was proposed to improve the Seq2Seq model. To understand the attention mechanism well, you must understand the Seq2Seq model.',
