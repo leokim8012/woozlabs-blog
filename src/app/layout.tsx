@@ -29,16 +29,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <link rel="icon" href="/favicon.png" />
-      {/* <Script src="https://www.googletagmanager.com/gtag/js?id=G-4GNQY03971" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-46LSSCLRX7" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
- 
-          gtag('config', 'G-4GNQY03971');
+
+          gtag('config', 'G-46LSSCLRX7');
         `}
-      </Script> */}
+      </Script>
       <body style={{ background: 'black' }}>
         <RootStyleRegistry>{children}</RootStyleRegistry>
       </body>
