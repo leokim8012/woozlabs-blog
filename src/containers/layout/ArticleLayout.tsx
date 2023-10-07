@@ -1,6 +1,6 @@
 'use client';
 // External Libraries
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
 // Models
 import { IArticle } from '@/models/article';
