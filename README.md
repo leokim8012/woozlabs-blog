@@ -29,4 +29,4 @@ This is the Wooz Labs hosted at https://woozlabs.com. For other versions, check 
 [wooztrading]: https://trading.woozlabs.com
 [woozaccounts]: https://accounts.woozlabs.com
 [wooznds]: https://nds.woozlabs.com
-[wwozllm]: https://chat.woozlabs.com
+[woozllm]: https://chat.woozlabs.com
