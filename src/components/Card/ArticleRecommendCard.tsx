@@ -22,7 +22,6 @@ const ArticleRecommendCard: FC<ArticleRecommendCardProps> = ({ article }) => {
     <Card className={styles['article']} variant={'transparent'} outlined={false} onClick={handleClick}>
       {/* <Image src={article.thumbnailUrl} alt="" width={'100%'} height={180} /> */}
       <Card.Body
-        jusify={'end'}
         title={
           <Typography.Text className={styles['article-card']} color={'violet'} size={4}>
             {article.title}
@@ -33,7 +32,6 @@ const ArticleRecommendCard: FC<ArticleRecommendCardProps> = ({ article }) => {
             {article.updatedAt.toDateString()}
           </Typography.Text>
         }
-        outlined={false}
       />
     </Card>
   );
