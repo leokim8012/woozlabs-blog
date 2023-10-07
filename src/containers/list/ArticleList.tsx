@@ -12,7 +12,7 @@ const ArticleList: FC<ArticleListProps> = ({ articles }) => {
   return (
     <>
       {articles.map((article) => (
-        <div key={article.id} style={{ marginBottom: '24px' }}>
+        <div key={article.id} style={{ marginBottom: 'var(--space-8)' }}>
           <ArticleListCard article={article} />
         </div>
       ))}

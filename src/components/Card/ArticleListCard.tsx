@@ -20,9 +20,17 @@ const ArticleListCard: FC<ArticleListCardProps> = ({ article }) => {
   return (
     <Card className={styles['article']} onClick={handleClick}>
       <Image src={article.thumbnailUrl} alt="" width={'100%'} height={320} radius={'large'} />
-      <Card.Heading title={article.title} subtitle={article.subtitle} outlined={false} />
+      <Card.Heading
+        title={
+          <Typography.Heading variant="h2" size={5} className={styles['article-title']} color={'violet'}>
+            {article.title}
+          </Typography.Heading>
+        }
+        subtitle={article.subtitle}
+        outlined={false}
+      />
       <Card.Actions outlined={false}>
-        <Typography.Text color={'gray'} size={'small'}>
+        <Typography.Text color={'gray'} highContrast={false}>
           {article.updatedAt.toDateString()}
         </Typography.Text>
       </Card.Actions>

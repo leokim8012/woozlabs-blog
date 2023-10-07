@@ -35,7 +35,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ article, nextArticle, olderArti
   };
   return (
     <Layout.Row style={{ marginBottom: '128px' }} gutter={[32, 32]}>
-      <Layout.Col xs={12} style={{ paddingLeft: 0 }}>
+      <Layout.Col xs={12}>
         <Button variant={'secondary'} onClick={onShareClick} size={'large'} iconPrepend={<Icon type={'Mail'} />}>
           Share
         </Button>
@@ -47,7 +47,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ article, nextArticle, olderArti
         </Button>
       </Layout.Col>
 
-      <Layout.Col xs={12} style={{ paddingLeft: 0 }}>
+      <Layout.Col xs={12}>
         {olderArticle && (
           <Card
             style={{
@@ -70,7 +70,10 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ article, nextArticle, olderArti
             style={{
               height: '100%',
               maxWidth: '300px',
+              display: 'flex',
               textAlign: 'end',
+              alignItems: 'end',
+              justifyContent: 'end',
               marginLeft: 'auto',
               cursor: 'pointer',
             }}

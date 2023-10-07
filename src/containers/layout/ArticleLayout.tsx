@@ -1,6 +1,6 @@
 'use client';
 // External Libraries
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
 // Models
 import { IArticle } from '@/models/article';
@@ -14,11 +14,14 @@ import RecommendArticleList from '@/containers/list/RecommendArticleList';
 import { useRouter } from 'next/navigation';
 
 // Styles
-import { Anchor, Layout, Typography } from '@woozdesign/ui';
+import { Anchor, Divider, Layout, Typography } from '@woozdesign/ui';
+import Image from 'next/image';
 import { NotionRenderer } from 'react-notion-x';
 import { Code } from 'react-notion-x/build/third-party/code';
 import { Equation } from 'react-notion-x/build/third-party/equation';
-import ArticleFooter from '../Article/ArticleFooter';
+import AppBar from '../AppBar/AppBar';
+import ArticleFooter from '../Footer/ArticleFooter';
+import Footer from '../Footer/Footer';
 import styles from './ArticleLayout.module.scss';
 
 const FEEDBACK_EMAIL = 'woozlabs.official@gmail.com';
@@ -26,10 +29,9 @@ const contentStyle: React.CSSProperties = {};
 const siderStyle = (top: string): React.CSSProperties => ({
   top: top,
   position: 'sticky',
-  padding: 'var(--space-8)',
+  // padding: 'var(--space-4)',
   overflowY: 'auto',
   height: `calc(100vh - ${top})`,
-  textAlign: top === '128px' ? 'end' : 'start',
 });
 
 interface ArticleLayoutProps {
@@ -77,37 +79,46 @@ const ArticleLayout: FC<ArticleLayoutProps> = ({ article, recordMap, nextArticle
   };
 
   return (
-    <Layout.Container style={{ maxWidth: '1600px' }}>
-      <Layout.Row justify={'center'}>
-        <Layout.Col xs={0} sm={0} md={6} className={styles.sider} style={siderStyle('0px')}>
-          <Typography.Subtitle level={5}>Recommended</Typography.Subtitle>
-          <RecommendArticleList />
-        </Layout.Col>
-        <Layout.Col xs={24} sm={16} md={12}>
-          <article>
-            <Typography.Title>{article.title}</Typography.Title>
-            <Typography.Text>
-              {article.author} · {article.updatedAt.toDateString()}
+    <>
+      <AppBar />
+      <Layout.Container style={{ maxWidth: '1400px' }}>
+        <Layout.Row gutter={[32, 32]}>
+          <Layout.Col xs={0} sm={0} md={6} className={styles.sider} style={{ textAlign: 'end', ...siderStyle('180px') }}>
+            <Typography.Text variant="p" highContrast={false}>
+              Recommended
             </Typography.Text>
+            <RecommendArticleList />
+          </Layout.Col>
+          <Layout.Col xs={24} sm={16} md={12}>
+            <article style={{ marginTop: '64px' }}>
+              <Typography.Heading size={9}>{article.title}</Typography.Heading>
+              <Typography.Text>
+                {article.author} · {article.updatedAt.toDateString()}
+              </Typography.Text>
+              <div style={{ margin: '2rem 0' }}>
+                <Divider />
+              </div>
+              <NotionRenderer
+                recordMap={recordMap}
+                fullPage={true}
+                pageTitle={<></>}
+                darkMode={true}
+                components={{ Equation, Code, nextImage: Image }}
+                disableHeader={true}
+                // pageTitle={<div>Title</div>}
+              />
+            </article>
+            <ArticleFooter article={article} nextArticle={nextArticle} olderArticle={olderArticle} />
+          </Layout.Col>
 
-            <NotionRenderer
-              recordMap={recordMap}
-              fullPage={true}
-              pageTitle={<></>}
-              darkMode={true}
-              components={{ Equation, Code }}
-              disableHeader={true}
-              // pageTitle={<div>Title</div>}
-            />
-          </article>
-          <ArticleFooter article={article} nextArticle={nextArticle} olderArticle={olderArticle} />
-        </Layout.Col>
+          <Layout.Col xs={0} sm={8} md={6} className={styles.sider} style={siderStyle('180px')}>
+            {isLoaded ? <Anchor items={anchorItems} offset={topOffset} /> : null}
+          </Layout.Col>
+        </Layout.Row>
+      </Layout.Container>
 
-        <Layout.Col xs={0} sm={8} md={6} className={styles.sider} style={siderStyle('128px')}>
-          {isLoaded ? <Anchor items={anchorItems} offset={topOffset} /> : null}
-        </Layout.Col>
-      </Layout.Row>
-    </Layout.Container>
+      <Footer />
+    </>
   );
 };
 

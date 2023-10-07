@@ -11,7 +11,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
   };
 };
 
-const NotFound = () => {
+const Error = () => {
   const router = useRouter();
   return (
     <Layout.Container style={{ height: '100vh' }}>
@@ -26,7 +26,7 @@ const NotFound = () => {
           flexDirection: 'column',
         }}
       >
-        <Typography.Heading>Not Found</Typography.Heading>
+        <Typography.Heading>Error</Typography.Heading>
         <Button variant={'secondary'} href="/">
           Return Home
         </Button>
@@ -45,4 +45,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default Error;

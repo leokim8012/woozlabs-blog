@@ -1,0 +1,22 @@
+.wrapper {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  padding: 24px;
+  box-sizing: border-box;
+  height: 128px;
+}
+
+.content {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
