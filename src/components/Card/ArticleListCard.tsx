@@ -18,7 +18,7 @@ const ArticleListCard: FC<ArticleListCardProps> = ({ article }) => {
   };
 
   return (
-    <Card className={styles['article']} onClick={handleClick}>
+    <Card className={styles['article']} variant={'transparent'} outlined={false} onClick={handleClick}>
       <Image src={article.thumbnailUrl} alt="" width={'100%'} height={320} radius={'large'} />
       <Card.Heading
         title={

@@ -33,9 +33,6 @@ const ArchiveLayout: FC<ArchiveLayoutProps> = ({ articles }) => {
               textAlign: 'end',
             }}
           >
-            <Typography.Text variant="p" highContrast={false}>
-              Recommend
-            </Typography.Text>
             <RecommendArticleList />
           </Layout.Col>
           <Layout.Col xs={24} sm={16} md={12}>
