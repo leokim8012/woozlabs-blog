@@ -29,7 +29,6 @@ const ArchiveLayout: FC<ArchiveLayoutProps> = ({ articles }) => {
               top: '64px',
               position: 'sticky',
               overflowY: 'auto',
-              height: 'calc(100vh - 64px)',
               textAlign: 'end',
               padding: '0 var(--space-4)',
             }}

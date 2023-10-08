@@ -36,7 +36,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ article, nextArticle, olderArti
   return (
     <Layout.Row style={{ marginBottom: '128px' }} gutter={[32, 32]}>
       <Layout.Col xs={12}>
-        <Button variant={'secondary'} onClick={onShareClick} size={'large'} iconPrepend={<Icon type={'Mail'} />}>
+        <Button variant={'secondary'} onClick={onShareClick} size={'large'} iconPrepend={<Icon type={'Link'} />}>
           Share
         </Button>
       </Layout.Col>
@@ -49,37 +49,38 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ article, nextArticle, olderArti
 
       <Layout.Col xs={12}>
         {olderArticle && (
-          <Card
-            style={{
-              height: '100%',
-              maxWidth: '300px',
-              textAlign: 'start',
-              marginRight: 'auto',
-              cursor: 'pointer',
-            }}
-            onClick={() => routerPush(olderArticle.id)}
-          >
-            <Card.Heading title={olderArticle.title} subtitle={'Older Article'} outlined={false}></Card.Heading>
+          <Card onClick={() => routerPush(olderArticle.id)}>
+            <Card.Body
+              title={
+                <Typography.Text style={{ textAlign: 'start', marginBottom: 'var(--space-2)' }} variant="div" size={3} highContrast={false}>
+                  Older Article
+                </Typography.Text>
+              }
+              content={
+                <Typography.Heading align={'start'} size={4}>
+                  {olderArticle.title}
+                </Typography.Heading>
+              }
+            ></Card.Body>
           </Card>
         )}
       </Layout.Col>
 
       <Layout.Col xs={12} style={{ paddingRight: 0 }}>
         {nextArticle && (
-          <Card
-            style={{
-              height: '100%',
-              maxWidth: '300px',
-              display: 'flex',
-              textAlign: 'end',
-              alignItems: 'end',
-              justifyContent: 'end',
-              marginLeft: 'auto',
-              cursor: 'pointer',
-            }}
-            onClick={() => routerPush(nextArticle.id)}
-          >
-            <Card.Heading title={nextArticle.title} subtitle={'Newer Article'} outlined={false}></Card.Heading>
+          <Card onClick={() => routerPush(nextArticle.id)}>
+            <Card.Body
+              title={
+                <Typography.Text style={{ textAlign: 'end', marginBottom: 'var(--space-2)' }} variant="div" size={3} highContrast={false}>
+                  Newer Article
+                </Typography.Text>
+              }
+              content={
+                <Typography.Heading align={'end'} size={4}>
+                  {nextArticle.title}
+                </Typography.Heading>
+              }
+            ></Card.Body>
           </Card>
         )}
       </Layout.Col>

@@ -1,6 +1,9 @@
 .sider {
   opacity: 0.5;
   transition: 0.2s ease-in-out;
+  position: -webkit-sticky;
+  position: sticky;
+  overflow-y: 'auto';
 }
 
 .sider:hover {
