@@ -82,26 +82,24 @@ const ArticleLayout: FC<ArticleLayoutProps> = ({ article, recordMap, nextArticle
   return (
     <>
       <AppBar />
-      <Layout.Container style={{ maxWidth: '1400px', overflow: 'hidden' }}>
+      <Layout.Container>
         <Layout.Row gutter={[32, 32]}>
-          <Layout.Col xs={0} sm={0} md={6} className={styles.sider} style={{ ...siderStyle('64px'), textAlign: 'end' }}>
+          <Layout.Col xs={0} sm={0} md={6} className={styles.sider} style={{ ...siderStyle('128px'), textAlign: 'end' }}>
             <RecommendArticleList />
           </Layout.Col>
           <Layout.Col xs={24} sm={16} md={12}>
-            <article style={{ marginTop: '64px' }}>
+            <article style={{ marginTop: '64px', overflow: 'hidden' }}>
               <Typography.Heading size={9}>{article.title}</Typography.Heading>
               <Typography.Text>
                 {article.author} · {article.updatedAt.toDateString()}
               </Typography.Text>
-              <div style={{ margin: '2rem 0' }}>
-                <Divider />
-              </div>
+              <Divider space={4} />
               <NotionRenderer recordMap={recordMap} fullPage={true} pageTitle={false} darkMode={true} components={{ Equation, Code, nextImage: Image }} disableHeader={true} />
             </article>
             <ArticleFooter article={article} nextArticle={nextArticle} olderArticle={olderArticle} />
           </Layout.Col>
 
-          <Layout.Col xs={0} sm={8} md={6} className={styles.sider} style={siderStyle('81px')}>
+          <Layout.Col xs={0} sm={8} md={6} className={styles.sider} style={siderStyle('180px')}>
             {isLoaded ? <Anchor items={anchorItems} offset={topOffset} /> : null}
           </Layout.Col>
         </Layout.Row>
