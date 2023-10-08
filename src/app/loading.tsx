@@ -1,6 +1,6 @@
 'use client';
-import React, { FC } from 'react';
-import SpinLoader from '@/components/Common/SpinLoader';
+import { ProgressCircular } from '@woozdesign/ui';
+import { FC } from 'react';
 
 interface loadingProps {}
 
@@ -17,7 +17,7 @@ const loading: FC<loadingProps> = ({}) => {
           flexDirection: 'column',
         }}
       >
-        <SpinLoader />
+        <ProgressCircular indeterminate size="small" />
       </div>
     </div>
   );

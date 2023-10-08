@@ -29,9 +29,6 @@ const contentStyle: React.CSSProperties = {};
 const siderStyle = (top: string): React.CSSProperties => ({
   top: top,
   position: 'sticky',
-  // padding: 'var(--space-4)',
-  overflowY: 'auto',
-  height: `calc(100vh - ${top})`,
 });
 
 interface ArticleLayoutProps {
@@ -87,7 +84,7 @@ const ArticleLayout: FC<ArticleLayoutProps> = ({ article, recordMap, nextArticle
       <AppBar />
       <Layout.Container style={{ maxWidth: '1400px', overflow: 'hidden' }}>
         <Layout.Row gutter={[32, 32]}>
-          <Layout.Col xs={0} sm={0} md={6} className={styles.sider} style={{ ...siderStyle('128px'), textAlign: 'end' }}>
+          <Layout.Col xs={0} sm={0} md={6} className={styles.sider} style={{ ...siderStyle('64px'), textAlign: 'end' }}>
             <RecommendArticleList />
           </Layout.Col>
           <Layout.Col xs={24} sm={16} md={12}>
@@ -104,7 +101,7 @@ const ArticleLayout: FC<ArticleLayoutProps> = ({ article, recordMap, nextArticle
             <ArticleFooter article={article} nextArticle={nextArticle} olderArticle={olderArticle} />
           </Layout.Col>
 
-          <Layout.Col xs={0} sm={8} md={6} className={styles.sider} style={siderStyle('150px')}>
+          <Layout.Col xs={0} sm={8} md={6} className={styles.sider} style={siderStyle('81px')}>
             {isLoaded ? <Anchor items={anchorItems} offset={topOffset} /> : null}
           </Layout.Col>
         </Layout.Row>

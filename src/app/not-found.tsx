@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Button, Layout, Typography } from '@woozdesign/ui';
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: 'Hash | 404',
+    title: 'WoozBlog | 404',
     description: 'Not Found',
   };
 };
