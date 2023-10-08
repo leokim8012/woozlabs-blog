@@ -458,13 +458,14 @@
 
 .notion-h:hover .notion-hash-link {
   opacity: 1;
+  display: block;
 }
 
 .notion-hash-link {
   opacity: 0;
   text-decoration: none;
   float: left;
-  margin-left: -20px;
+  display: none;
   padding-right: 4px;
   fill: var(--fg-color-icon);
 }
