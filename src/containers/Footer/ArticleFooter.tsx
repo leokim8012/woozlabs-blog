@@ -1,6 +1,6 @@
 import { IArticle } from '@/models/article';
 import { Icon } from '@woozdesign/icons';
-import { Button, Card, Layout, Typography } from '@woozdesign/ui';
+import { Button, Card, Layout, Typography, useToast } from '@woozdesign/ui';
 import { useRouter } from 'next/navigation';
 import React, { FC } from 'react';
 
@@ -13,6 +13,8 @@ interface ArticleFooterProps {
 const ArticleFooter: FC<ArticleFooterProps> = ({ article, nextArticle, olderArticle }) => {
   const router = useRouter();
 
+  const [openToast, context] = useToast();
+
   const routerPush = (articleId: string) => {
     router.push(`/article/${articleId}`);
   };
@@ -20,29 +22,35 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ article, nextArticle, olderArti
   const onShareClick = async () => {
     try {
       await navigator.clipboard.writeText(location.href);
-      // messageApi.open({
-      //   type: 'success',
-      //   content: 'The URL has been copied.',
-      // });
+      openToast({
+        message: 'The URL has been copied',
+        color: 'grass',
+        highContrast: true,
+        placement: 'bottomRight',
+      });
     } catch (e) {
       if (e instanceof Error) {
-        // messageApi.open({
-        //   type: 'error',
-        //   content: (e as Error).message,
-        // });
+        openToast({
+          message: 'Error occured',
+          color: 'crimson',
+          highContrast: true,
+          placement: 'bottomRight',
+        });
       }
     }
   };
+
   return (
     <Layout.Row style={{ marginBottom: '128px' }} gutter={[32, 32]}>
+      {context}
       <Layout.Col xs={12}>
-        <Button variant={'secondary'} onClick={onShareClick} size={'large'} iconPrepend={<Icon type={'Link'} />}>
+        <Button variant={'soft'} onClick={onShareClick} size={'large'} iconPrepend={<Icon type={'Link'} />}>
           Share
         </Button>
       </Layout.Col>
 
       <Layout.Col xs={12} style={{ paddingRight: 0, textAlign: 'end' }}>
-        <Button variant={'secondary'} href={`mailto:woozlabs.official@gmail.com?subject=[${article?.title ?? 'WoozLabs'}]`} size={'large'} iconPrepend={<Icon type={'Mail'} />}>
+        <Button variant={'soft'} href={`mailto:woozlabs.official@gmail.com?subject=[${article?.title ?? 'WoozLabs'}]`} size={'large'} iconPrepend={<Icon type={'Mail'} />}>
           Feedback
         </Button>
       </Layout.Col>
