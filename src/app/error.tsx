@@ -27,12 +27,12 @@ const Error = () => {
         }}
       >
         <Typography.Heading>Error</Typography.Heading>
-        <Button variant={'secondary'} href="/">
+        <Button variant={'soft'} href="/">
           Return Home
         </Button>
 
         {/* <Button
-          type={'primary'}
+          type={'solid'}
           onClick={
             // Attempt to recover by trying to re-render the segment
             () => reset()
