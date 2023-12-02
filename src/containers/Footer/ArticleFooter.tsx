@@ -1,6 +1,6 @@
 import { IArticle } from '@/models/article';
 import { Icon } from '@woozdesign/icons';
-import { Button, Card, Layout, Typography, useToast } from '@woozdesign/ui';
+import { Button, Card, Col, Flex, Layout, Row, Typography, useToast } from '@woozdesign/ui';
 import { useRouter } from 'next/navigation';
 import React, { FC } from 'react';
 
@@ -41,58 +41,56 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ article, nextArticle, olderArti
   };
 
   return (
-    <Layout.Row style={{ marginBottom: '128px' }} gutter={[32, 32]}>
+    <Row style={{ marginBottom: '128px' }} gutter={[32, 32]}>
       {context}
-      <Layout.Col xs={12}>
-        <Button variant={'soft'} onClick={onShareClick} size={'large'} iconPrepend={<Icon type={'Link'} />}>
+
+      <Flex width={'100%'} justify="space-between" align="center" px={'4'}>
+        <Button variant={'ghost'} onClick={onShareClick} size={'large'} iconPrepend={<Icon type={'Link'} />}>
           Share
         </Button>
-      </Layout.Col>
-
-      <Layout.Col xs={12} style={{ paddingRight: 0, textAlign: 'end' }}>
-        <Button variant={'soft'} href={`mailto:woozlabs.official@gmail.com?subject=[${article?.title ?? 'WoozLabs'}]`} size={'large'} iconPrepend={<Icon type={'Mail'} />}>
+        <Button variant={'ghost'} href={`mailto:woozlabs.official@gmail.com?subject=[${article?.title ?? 'WoozLabs'}]`} size={'large'} iconPrepend={<Icon type={'Mail'} />}>
           Feedback
         </Button>
-      </Layout.Col>
+      </Flex>
 
-      <Layout.Col xs={12}>
+      <Col xs={12}>
         {olderArticle && (
           <Card onClick={() => routerPush(olderArticle.id)}>
             <Card.Body
               title={
-                <Typography.Text style={{ textAlign: 'start', marginBottom: 'var(--space-2)' }} variant="div" size={3} highContrast={false}>
+                <Typography.Text mb={'2'} variant="div" highContrast={false}>
                   Older Article
                 </Typography.Text>
               }
               content={
-                <Typography.Heading align={'start'} size={4}>
+                <Typography.Header variant={'h4'} size={'3'} align={'start'}>
                   {olderArticle.title}
-                </Typography.Heading>
+                </Typography.Header>
               }
             ></Card.Body>
           </Card>
         )}
-      </Layout.Col>
+      </Col>
 
-      <Layout.Col xs={12} style={{ paddingRight: 0 }}>
+      <Col xs={12} style={{ paddingRight: 0 }}>
         {nextArticle && (
           <Card onClick={() => routerPush(nextArticle.id)}>
             <Card.Body
               title={
-                <Typography.Text style={{ textAlign: 'end', marginBottom: 'var(--space-2)' }} variant="div" size={3} highContrast={false}>
+                <Typography.Text mb={'2'} variant="div" align="end" highContrast={false}>
                   Newer Article
                 </Typography.Text>
               }
               content={
-                <Typography.Heading align={'end'} size={4}>
+                <Typography.Header variant={'h3'} size={'3'} align={'end'}>
                   {nextArticle.title}
-                </Typography.Heading>
+                </Typography.Header>
               }
             ></Card.Body>
           </Card>
         )}
-      </Layout.Col>
-    </Layout.Row>
+      </Col>
+    </Row>
   );
 };
 

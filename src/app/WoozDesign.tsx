@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { Theme } from '@woozdesign/ui';
+import { ThemeProvider } from '@woozdesign/ui';
 
 export const RootStyleRegistry = ({ children }: React.PropsWithChildren) => {
   return (
-    <Theme.ThemeProvider accentColor={'violet'} scaling={'90%'}>
+    <ThemeProvider appearance={'dark'} accentColor={'violet'}>
       {children}
-    </Theme.ThemeProvider>
+    </ThemeProvider>
   );
 };

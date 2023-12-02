@@ -14,7 +14,7 @@ import RecommendArticleList from '@/containers/list/RecommendArticleList';
 import { useRouter } from 'next/navigation';
 
 // Styles
-import { Anchor, Divider, Layout, Typography } from '@woozdesign/ui';
+import { Anchor, Col, Container, Divider, Layout, Row, Typography } from '@woozdesign/ui';
 import Image from 'next/image';
 import { NotionRenderer } from 'react-notion-x';
 import { Code } from 'react-notion-x/build/third-party/code';
@@ -82,28 +82,28 @@ const ArticleLayout: FC<ArticleLayoutProps> = ({ article, recordMap, nextArticle
   return (
     <>
       <AppBar />
-      <Layout.Container style={{ overflowX: 'clip' }}>
-        <Layout.Row gutter={[32, 32]}>
-          <Layout.Col xs={0} sm={0} md={6} className={styles.sider} style={{ ...siderStyle('128px'), textAlign: 'end' }}>
+      <Container style={{ overflowX: 'clip' }}>
+        <Row gutter={[32, 32]}>
+          <Col xs={0} sm={0} md={6} className={styles.sider} style={{ ...siderStyle('128px'), textAlign: 'end' }}>
             <RecommendArticleList />
-          </Layout.Col>
-          <Layout.Col xs={24} sm={16} md={12}>
+          </Col>
+          <Col xs={24} sm={16} md={12}>
             <article style={{ marginTop: '64px', overflow: 'hidden' }}>
-              <Typography.Heading size={9}>{article.title}</Typography.Heading>
+              <Typography.Header size={9}>{article.title}</Typography.Header>
               <Typography.Text>
                 {article.author} · {article.updatedAt.toDateString()}
               </Typography.Text>
-              <Divider space={4} />
+              <Divider space={4} color="gray" my={'4'} />
               <NotionRenderer recordMap={recordMap} fullPage={true} pageTitle={false} darkMode={true} components={{ Equation, Code, nextImage: Image }} disableHeader={true} />
             </article>
             <ArticleFooter article={article} nextArticle={nextArticle} olderArticle={olderArticle} />
-          </Layout.Col>
+          </Col>
 
-          <Layout.Col xs={0} sm={8} md={6} className={styles.sider} style={siderStyle('180px')}>
+          <Col xs={0} sm={8} md={6} className={styles.sider} style={siderStyle('180px')}>
             {isLoaded ? <Anchor items={anchorItems} offset={topOffset} /> : null}
-          </Layout.Col>
-        </Layout.Row>
-      </Layout.Container>
+          </Col>
+        </Row>
+      </Container>
 
       <Footer />
     </>

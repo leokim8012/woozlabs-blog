@@ -20,15 +20,14 @@ const ArticleRecommendCard: FC<ArticleRecommendCardProps> = ({ article }) => {
 
   return (
     <Card className={styles['article']} variant={'transparent'} outlined={false} onClick={handleClick}>
-      {/* <Image src={article.thumbnailUrl} alt="" width={'100%'} height={180} /> */}
       <Card.Body
         title={
-          <Typography.Text className={styles['article-card']} color={'violet'} size={4}>
+          <Typography.Text className={styles['article-card']} color={'violet'}>
             {article.title}
           </Typography.Text>
         }
         content={
-          <Typography.Text variant="p" color={'gray'} size={3} highContrast={false}>
+          <Typography.Text variant="p" color={'gray'} align="end" highContrast={false}>
             {article.updatedAt.toDateString()}
           </Typography.Text>
         }
