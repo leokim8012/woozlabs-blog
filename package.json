@@ -1,6 +1,6 @@
 {
   "name": "woozlabs-blog",
-  "version": "1.0.3",
+  "version": "1.2.0-alpha.6",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@woozdesign/icons": "^1.0.2",
-    "@woozdesign/ui": "^0.3.9",
+    "@woozdesign/icons": "^1.1.2",
+    "@woozdesign/ui": "^1.2.0-alpha.6",
     "katex": "^0.16.9",
     "next": "13.5.4",
     "notion-client": "^6.16.0",
