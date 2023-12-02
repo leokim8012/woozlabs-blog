@@ -11,10 +11,12 @@ interface AppBarProps {}
 const AppBar: FC<AppBarProps> = ({}) => {
   return (
     <div style={{ zIndex: 9999 }}>
-      <WoozAppBar position={'fixed'} variant={'transparent'}>
+      <WoozAppBar position={'fixed'} variant={'translucent'}>
         <WoozAppBar.Header>
           <a href="/">
-            <Image width={120} alt="Wooz Blog" src="/assets/icons/logo.svg" placeholder="/assets/icons/logo.svg"></Image>
+            <h1>
+              <Image width={98} alt="Wooz Blog" src="/assets/icons/logo.svg" placeholder="/assets/icons/logo.svg"></Image>
+            </h1>
           </a>
         </WoozAppBar.Header>
         <WoozAppBar.Body></WoozAppBar.Body>

@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gtag('config', 'G-46LSSCLRX7');
         `}
       </Script>
-      <body>
+      <body style={{ background: 'black' }}>
         <RootStyleRegistry>{children}</RootStyleRegistry>
       </body>
     </html>
