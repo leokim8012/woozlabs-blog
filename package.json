@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@woozdesign/icons": "^1.1.2",
+    "@woozdesign/icons": "^1.1.0",
     "@woozdesign/ui": "^1.2.0-alpha.6",
     "katex": "^0.16.9",
     "next": "13.5.4",

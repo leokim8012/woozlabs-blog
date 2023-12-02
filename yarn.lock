@@ -316,7 +316,7 @@
   dependencies:
     sass "^1.67.0"
 
-"@woozdesign/icons@^1.1.0", "@woozdesign/icons@^1.1.2":
+"@woozdesign/icons@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@woozdesign/icons/-/icons-1.1.0.tgz#f8c9082912ddef0dfd1377b963a61291caa09889"
   integrity sha512-mvIuN9nH0rkC6+3pd61tVMUeayV3einrHj6apoJBWwyzI1iee+6dkokqLnrvU+I08/tKbPLfqngWWH1GzbZAkA==
