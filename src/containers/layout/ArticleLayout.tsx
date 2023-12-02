@@ -89,11 +89,11 @@ const ArticleLayout: FC<ArticleLayoutProps> = ({ article, recordMap, nextArticle
           </Col>
           <Col xs={24} sm={16} md={12}>
             <article style={{ marginTop: '64px', overflow: 'hidden' }}>
-              <Typography.Header size={9}>{article.title}</Typography.Header>
+              <Typography.Header size={'9'}>{article.title}</Typography.Header>
               <Typography.Text>
                 {article.author} · {article.updatedAt.toDateString()}
               </Typography.Text>
-              <Divider space={4} color="gray" my={'4'} />
+              <Divider color="gray" my={'5'} />
               <NotionRenderer recordMap={recordMap} fullPage={true} pageTitle={false} darkMode={true} components={{ Equation, Code, nextImage: Image }} disableHeader={true} />
             </article>
             <ArticleFooter article={article} nextArticle={nextArticle} olderArticle={olderArticle} />

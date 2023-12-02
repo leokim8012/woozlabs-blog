@@ -19,7 +19,6 @@ const AppBar: FC<AppBarProps> = ({}) => {
             </h1>
           </a>
         </WoozAppBar.Header>
-        <WoozAppBar.Body></WoozAppBar.Body>
         <WoozAppBar.Action>
           <Flex align="center">
             <IconButton href="https://github.com/leokim8012" variant={'transparent'} color={'gray'} highContrast>

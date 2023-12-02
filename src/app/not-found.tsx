@@ -3,45 +3,31 @@
 import { Metadata } from 'next';
 import { useRouter } from 'next/navigation';
 
-import { Button, Layout, Typography } from '@woozdesign/ui';
+import RootAppBar from '@/containers/AppBar/AppBar';
+import { Icon } from '@woozdesign/icons';
+import { Button, Container, Flex, Typography } from '@woozdesign/ui';
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: 'WoozBlog | 404',
-    description: 'Not Found',
+    title: '404 - WoozBlog',
+    description: 'Nothing is here',
   };
 };
 
 const NotFound = () => {
   const router = useRouter();
   return (
-    <Layout.Container style={{ height: '100vh' }}>
-      <div
-        style={{
-          textAlign: 'center',
-          height: '100%',
-          display: 'flex',
-          gap: 'var(--space-4)',
-          alignItems: 'center',
-          placeContent: 'center',
-          flexDirection: 'column',
-        }}
-      >
-        <Typography.Heading>Not Found</Typography.Heading>
-        <Button variant={'soft'} href="/">
-          Return Home
-        </Button>
-
-        {/* <Button
-          type={'solid'}
-          onClick={
-            // Attempt to recover by trying to re-render the segment
-            () => reset()
-          }
-        >
-          Try again
-        </Button> */}
-      </div>
-    </Layout.Container>
+    <>
+      <RootAppBar />
+      <Container style={{ height: '100vh' }}>
+        <Flex height={'100%'} width={'100%'} direction={'column'} align="center" justify={'center'}>
+          <Icon type={'AlertTriangle'} />
+          <Typography.Header size={'5'}>Nothing is here</Typography.Header>
+          <Button variant={'ghost'} onClick={() => router.back()} style={{ marginTop: 'var(--space-4)' }}>
+            Return
+          </Button>
+        </Flex>
+      </Container>
+    </>
   );
 };
 
