@@ -211,7 +211,7 @@ export const ARTICLES: IArticle[] = [
     notionId: 'a11e62c3eb714cc7a054b4114a170869',
     createdAt: new Date('2021-10-09T07:00:00.000Z'),
     updatedAt: new Date('2021-10-09T07:00:00.000Z'),
-    recommended: true,
+    // recommended: true,
   },
   {
     id: 'kl-divergence',

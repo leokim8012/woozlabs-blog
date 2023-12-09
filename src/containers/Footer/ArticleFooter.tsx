@@ -55,7 +55,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ article, nextArticle, olderArti
 
       <Col xs={12}>
         {olderArticle && (
-          <Card onClick={() => routerPush(olderArticle.id)}>
+          <Card variant={'translucent'} onClick={() => routerPush(olderArticle.id)}>
             <Card.Body
               title={
                 <Typography.Text mb={'2'} variant="div" highContrast={false}>
@@ -74,7 +74,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ article, nextArticle, olderArti
 
       <Col xs={12} style={{ paddingRight: 0 }}>
         {nextArticle && (
-          <Card onClick={() => routerPush(nextArticle.id)}>
+          <Card variant={'translucent'} onClick={() => routerPush(nextArticle.id)}>
             <Card.Body
               title={
                 <Typography.Text mb={'2'} variant="div" align="end" highContrast={false}>
