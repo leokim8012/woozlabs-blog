@@ -15,6 +15,18 @@ export interface IArticle {
 
 export const ARTICLES: IArticle[] = [
   {
+    id: 'latent-dirichlet-allocation',
+    title: 'Latent Dirichlet Allocation - Part.1',
+    subtitle: "LDA's main function is not dimension reduction but Topic Modeling, and the definition of Topic Modeling, borrowing from the expression in the paper, is as follows",
+    author: 'Kwanwoo',
+    category: 'ML',
+    recommended: true,
+    thumbnailUrl: 'https://miro.medium.com/v2/resize:fit:850/1*VK5R_2YlRx3NbRIMbUxJ8Q.png',
+    notionId: '6f1d19cc8e8648069cc93d755aeb14a3',
+    createdAt: new Date('2023-12-07T07:00:00.456Z'),
+    updatedAt: new Date('2023-12-07T07:00:00.653Z'),
+  },
+  {
     id: 'transformer-2',
     title: 'From Seq2Seq to Transformer  - Part.2',
     subtitle: 'The transformer model represents another significant leap in the NLP field after the Seq2Seq model and the attention mechanism.',
