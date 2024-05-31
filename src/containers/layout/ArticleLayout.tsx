@@ -83,7 +83,7 @@ const ArticleLayout: FC<ArticleLayoutProps> = ({ article, recordMap, nextArticle
     <>
       <AppBar />
       <Container style={{ overflowX: 'clip' }}>
-        <Row gutter={[32, 32]}>
+        <Row gutter={['6', '6']}>
           <Col xs={0} sm={0} md={6} className={styles.sider} style={{ ...siderStyle('128px'), textAlign: 'end' }}>
             <RecommendArticleList />
           </Col>

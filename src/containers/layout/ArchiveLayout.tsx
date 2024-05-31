@@ -20,7 +20,7 @@ const ArchiveLayout: FC<ArchiveLayoutProps> = ({ articles }) => {
     <>
       <AppBar />
       <Container style={{ marginTop: 64 }}>
-        <Row style={{ maxWidth: '1280px', margin: 'auto' }} gutter={[16, 16]}>
+        <Row style={{ maxWidth: '1280px', margin: 'auto' }} gutter={['4', '4']}>
           <Col
             xs={0}
             sm={8}
