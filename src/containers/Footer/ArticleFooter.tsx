@@ -41,7 +41,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ article, nextArticle, olderArti
   };
 
   return (
-    <Row style={{ marginBottom: '128px' }} gutter={[32, 32]}>
+    <Row style={{ marginBottom: '128px' }} gutter={['6', '6']}>
       {context}
 
       <Flex width={'100%'} justify="space-between" align="center" px={'4'}>
