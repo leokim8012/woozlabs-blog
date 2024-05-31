@@ -1,6 +1,6 @@
 'use client';
 
-import { Flex, IconButton, Image, AppBar as WoozAppBar } from '@woozdesign/ui';
+import { Button, Flex, IconButton, Image, AppBar as WoozAppBar } from '@woozdesign/ui';
 import { FC } from 'react';
 import styles from './AppBar.module.scss';
 import App from 'next/app';
@@ -21,6 +21,9 @@ const AppBar: FC<AppBarProps> = ({}) => {
         </WoozAppBar.Header>
         <WoozAppBar.Action>
           <Flex align="center">
+            <Button href="https://drive.google.com/file/d/1emAD_0HPYez7rk18RHKi7YpNcy3bnRX1/view?usp=sharing" variant={'transparent'} color={'gray'} highContrast>
+              Résumé
+            </Button>
             <IconButton href="https://github.com/leokim8012" variant={'transparent'} color={'gray'} highContrast>
               <Icon type={'Github'} />
             </IconButton>
