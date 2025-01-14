@@ -15,6 +15,18 @@ export interface IArticle {
 
 export const ARTICLES: IArticle[] = [
   {
+    id: 'LoRA',
+    title: 'LORA: LOW-RANK ADAPTATION OF LARGE LANGUAGE MODELS',
+    subtitle: 'Many applications in natural language processing rely on adapting one large-scale, pre-trained language model to multiple downstream applications.',
+    author: 'Kwanwoo',
+    category: 'ML',
+    recommended: true,
+    thumbnailUrl: 'https://miro.medium.com/v2/resize:fit:1200/0*c-4GJSAP8WfDkxfm.gif',
+    notionId: '17a0a6e7f3458028bee1f6bf3db77598',
+    createdAt: new Date('2025-01-14T07:00:00.456Z'),
+    updatedAt: new Date('2025-01-14T07:00:00.653Z'),
+  },
+  {
     id: 'MLLM-as-a-Judge',
     title: 'Assessing Multimodal LLM-as-a-Judge with Vision-Language Benchmark',
     subtitle: 'Can MLLMs effectively serve as judges in the multimodal domain, and how closely do their evaluations align with human preferences?',
