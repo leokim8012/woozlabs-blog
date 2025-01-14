@@ -15,6 +15,18 @@ export interface IArticle {
 
 export const ARTICLES: IArticle[] = [
   {
+    id: 'MLLM-as-a-Judge',
+    title: 'Assessing Multimodal LLM-as-a-Judge with Vision-Language Benchmark',
+    subtitle: 'Can MLLMs effectively serve as judges in the multimodal domain, and how closely do their evaluations align with human preferences?',
+    author: 'Kwanwoo',
+    category: 'ML',
+    recommended: true,
+    thumbnailUrl: 'https://mllm-judge.github.io/img/mllm-radar.png',
+    notionId: '17a0a6e7f34580cab56cf3a854b7ddac',
+    createdAt: new Date('2025-01-11T07:00:00.456Z'),
+    updatedAt: new Date('2025-01-11T07:00:00.653Z'),
+  },
+  {
     id: 'latent-dirichlet-allocation',
     title: 'Latent Dirichlet Allocation - Part.1',
     subtitle: "LDA's main function is not dimension reduction but Topic Modeling, and the definition of Topic Modeling, borrowing from the expression in the paper, is as follows",
