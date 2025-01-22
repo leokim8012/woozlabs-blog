@@ -15,6 +15,18 @@ export interface IArticle {
 
 export const ARTICLES: IArticle[] = [
   {
+    id: 'Prometheus',
+    title: 'Prometheus: Inducing Fine-grained Evaluation Capability in Language Models',
+    subtitle: 'Originates from the growing reliance on LLMs for evaluating human-level text generation.',
+    author: 'Kwanwoo',
+    category: 'ML',
+    recommended: true,
+    thumbnailUrl: 'https://arxiv.org/html/2310.08491v2/x1.png',
+    notionId: '1830a6e7f34580a4ba92d0dfbfccf674',
+    createdAt: new Date('2025-01-21T07:00:00.456Z'),
+    updatedAt: new Date('2025-01-21T07:00:00.653Z'),
+  },
+  {
     id: 'LoRA',
     title: 'LORA: LOW-RANK ADAPTATION OF LARGE LANGUAGE MODELS',
     subtitle: 'Many applications in natural language processing rely on adapting one large-scale, pre-trained language model to multiple downstream applications.',
