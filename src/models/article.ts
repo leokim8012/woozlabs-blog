@@ -15,6 +15,18 @@ export interface IArticle {
 
 export const ARTICLES: IArticle[] = [
   {
+    id: 'Eyes-Wide-Shut',
+    title: 'Eyes Wide Shut? Exploring the Visual Shortcomings of Multimodal LLMs',
+    subtitle: 'The study investigates the visual limitations of multimodal large language models (MLLMs), specifically focusing on visual encoders like CLIP.',
+    author: 'Kwanwoo',
+    category: 'ML',
+    recommended: true,
+    thumbnailUrl: 'https://i.ytimg.com/vi/DgR_OsWl8Og/maxresdefault.jpg',
+    notionId: '1840a6e7f345806f8ad9ddea967ef715',
+    createdAt: new Date('2025-01-22T07:00:00.456Z'),
+    updatedAt: new Date('2025-01-22T07:00:00.653Z'),
+  },
+  {
     id: 'Prometheus',
     title: 'Prometheus: Inducing Fine-grained Evaluation Capability in Language Models',
     subtitle: 'Originates from the growing reliance on LLMs for evaluating human-level text generation.',
